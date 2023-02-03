@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:30:52 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/03 16:00:47 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
 int	ft_fit(t_fdf *fdf)
 {

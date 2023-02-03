@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:02 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:27:59 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/03 16:01:21 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
 static void	ft_get_map_information(t_fdf *fdf)
 {
@@ -63,7 +63,7 @@ static void	ft_fill_tab(t_fdf *fdf)
 
 void	ft_map(t_fdf *fdf)
 {
-    ft_get_map_information(fdf, );
+    ft_get_map_information(fdf);
 	fdf->map.data = ft_alloc_tab(fdf->map.hauteur, fdf->map.largeur); // libft
 	ft_fill_tab(fdf);
 	fdf->map.map_path = NULL;

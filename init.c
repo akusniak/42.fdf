@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:36 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:28:55 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/03 16:01:15 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
-static void	ft_create_window_env(t_fdf *fdf)
+void	ft_create_window_env(t_fdf *fdf)
 {
 	fdf->screen.window.hauteur = 750;
 	fdf->screen.window.largeur = 750;

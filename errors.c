@@ -6,11 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:26 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/02 19:49:29 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 16:01:09 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
 void    ft_errors(int error_code, t_fdf *fdf)
 {

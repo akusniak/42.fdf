@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:42 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:28:46 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/03 16:01:18 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
-void ft_parsing(char *map)
+static void ft_parsing(char *map)
 {
     ft_suffix_check(map, ".fdf"); //libft
     ft_file_check(map); // libft

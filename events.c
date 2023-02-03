@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:15:51 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/03 16:27:16 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fdf.h"
+# include "includes/fdf.h"
 
 int	ft_deal_key(int key, t_fdf *fdf)
 {
