@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:13:35 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 17:38:02 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void    ft_exit_mlx(t_fdf *fdf)
 {
     mlx_loop_end(fdf->screen.mlx.mlx);
 	mlx_destroy_image(fdf->screen.mlx.mlx, fdf->screen.image.img);
-	mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
+	mlx_destroy_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	mlx_destroy_display(fdf->screen.mlx.mlx);
 	ft_free_tab_int(fdf->map.data, fdf->map.hauteur);
-	// free(fdf->screen.mlx.mlx);
-	// free(fdf->screen.mlx.window);
 	free(fdf);
 	exit(1);
 }

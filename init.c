@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:36 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:01:15 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 17:41:15 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@ void	ft_create_window_env(t_fdf *fdf)
 	fdf->screen.window.largeur = 750;
 	//set NULL
 	fdf->screen.mlx.mlx = mlx_init();
-	if (fdf->screen.mlx.mlx == 0)
+	if (fdf->screen.mlx.mlx == NULL)
 		ft_errors(MLX_CRASH, fdf);
 	fdf->screen.mlx.window = mlx_new_window(fdf->screen.mlx.mlx,fdf->screen.window.largeur, fdf->screen.window.hauteur, "FdF");
 	if (fdf->screen.mlx.window == 0)
 		ft_errors(MLX_CRASH, fdf);
-
 }
 
 void ft_create_image_env(t_fdf *fdf)
