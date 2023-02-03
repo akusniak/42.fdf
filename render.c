@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:57:44 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:40:16 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 20:39:03 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_render(t_fdf *fdf)
     mlx_hook(fdf->screen.mlx.window, 17, (1L<<5), ft_close, fdf); // work mais pas propre
 	mlx_key_hook(fdf->screen.mlx.window, ft_deal_key, fdf);
     mlx_loop(fdf->screen.mlx.mlx);
-	ft_exit_mlx(fdf);
+	//ft_exit_mlx(fdf); nécessaire ou pas ?
 }
 
 void	ft_print_help(void *mlx, void *window)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:36 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 17:41:15 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 20:57:56 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_fdf	*ft_create_structure(char *argv)
 
 	fdf = malloc(sizeof(t_fdf));
 	if (fdf == NULL)
-        ft_errors(FDF_INIT, fdf);
+        ft_errors("YNNNNNNNNNNNN", fdf);
 	ft_init_point(fdf);
 	ft_init_map(fdf, argv);
 	ft_init_display(fdf);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 17:32:02 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/03 20:43:53 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_deal_key(int key, t_fdf *fdf)
 		fdf->display.altitude -= 1;
 	if (key == ESC)
 		ft_exit_mlx(fdf);
+	// peut etre clear window ici ??
 	ft_create_image_env(fdf);
 	ft_draw(fdf);
 	return (0);
