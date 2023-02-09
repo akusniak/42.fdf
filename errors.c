@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:26 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:01:09 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:14:58 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void    ft_errors(int error_code, t_fdf *fdf)
     {
         ft_printf("MLX crash");
         ft_free_tab_int(fdf->map.data, fdf->map.hauteur);
-        free(fdf->screen.mlx.window);
         free(fdf->screen.mlx.mlx);
     }
     free(fdf);

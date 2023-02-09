@@ -6,7 +6,7 @@
 /*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 20:43:53 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/09 19:07:09 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,14 @@ int	ft_deal_key(int key, t_fdf *fdf)
 	if (key == ESC)
 		ft_exit_mlx(fdf);
 	// peut etre clear window ici ??
+	//mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	ft_create_image_env(fdf);
 	ft_draw(fdf);
+	return (0);
+}
+
+int	handle_no_event(void *data)
+{
+	(void)data;
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:57:44 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 17:01:39 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/09 19:55:45 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "includes/fdf.h"
 
-static int	ft_close(int keycode, t_fdf *fdf)
+static int	ft_close(t_fdf *fdf)
 {
 	ft_exit_mlx(fdf);
 	return (0);
@@ -21,10 +21,10 @@ static int	ft_close(int keycode, t_fdf *fdf)
 void	ft_render(t_fdf *fdf)
 {
     ft_draw(fdf);
-    mlx_hook(fdf->screen.mlx.window, 17, (1L<<5), ft_close, fdf); // work mais pas propre
-	mlx_key_hook(fdf->screen.mlx.window, ft_deal_key, fdf);
+	mlx_loop_hook(fdf->screen.mlx.mlx, &handle_no_event, fdf);
+    mlx_hook(fdf->screen.mlx.window, 17, (1L<<5), &ft_close, fdf); // work mais pas propre
+	mlx_key_hook(fdf->screen.mlx.window, &ft_deal_key, fdf);
     mlx_loop(fdf->screen.mlx.mlx);
-	//ft_exit_mlx(fdf); nécessaire ou pas ?
 }
 
 void	ft_print_help(void *mlx, void *window)

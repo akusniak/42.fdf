@@ -6,7 +6,7 @@
 /*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:28 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 12:26:44 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/09 19:02:55 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void    ft_errors(int error_code, t_fdf *fdf);
 
 /* EVENTS.C */
 int     ft_deal_key(int key, t_fdf *fdf);
+int	    handle_no_event(void *data);
 
 /* FREE_UTILS.C */
 void	ft_free_tab_char(char **data, int i);

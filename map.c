@@ -6,7 +6,7 @@
 /*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:02 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 18:06:54 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/09 20:00:33 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ static void	ft_fill_tab(t_fdf *fdf)
 	haut = 0;
 	while (haut < fdf->map.hauteur)
 	{
-		larg = 0;
 		line = ft_gnl(fdf->map.fd);
 		ready_to_extract = ft_split(line, SPACE);
 		free(line);
+		larg = 0;
 		while (larg < fdf->map.largeur)
 		{
 			fdf->map.data[haut][larg] = ft_atoi(ready_to_extract[larg]);
