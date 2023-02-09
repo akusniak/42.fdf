@@ -6,7 +6,7 @@
 /*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:36 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 20:57:56 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/09 16:43:41 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ t_fdf	*ft_create_structure(char *argv)
 {
 	t_fdf		*fdf;
 
-	fdf = malloc(sizeof(t_fdf));
+	fdf = (t_fdf*)malloc(sizeof(t_fdf));
 	if (fdf == NULL)
-        ft_errors("YNNNNNNNNNNNN", fdf);
+        ft_errors(FDF_INIT, fdf);
 	ft_init_point(fdf);
 	ft_init_map(fdf, argv);
 	ft_init_display(fdf);

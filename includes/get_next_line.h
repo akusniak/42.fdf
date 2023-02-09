@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 10:17:42 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 15:23:46 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:44:59 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 #  define BUFFER_SIZE 4096
 # endif
 
-char	*ft_read_copy(int fd, char *save);
-char	*ft_extract(char *save);
-char	*ft_new_save(char *save);
 char	*ft_strjoin_gnl(char *save, char *buffer);
 char	*ft_gnl(int fd);
 
