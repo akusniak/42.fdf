@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:26 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 13:35:46 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:46:37 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_errors(int error_code, t_fdf *fdf)
 {
+	(void)error_code;
 	free(fdf);
 	exit(1);
 }

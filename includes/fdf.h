@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:28 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 12:48:23 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 15:31:45 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@
 # define DOWN 65364
 # define MINUS 65453
 # define MAX 65451
+# define BLUE 0x0000FF
+# define NAVY_BLUE 0x000080
+# define GREEN 0x006400
+# define MARRON 0x8B4513
 
 typedef struct s_image
 {
@@ -67,6 +71,7 @@ typedef struct s_map
 	int		largeur;
 	int		**data;
 	char	*map_path;
+	int		max_altitude;
 }			t_map;
 
 typedef struct s_window
@@ -130,6 +135,6 @@ void	ft_exit_mlx(t_fdf *fdf);
 void	ft_init_map(t_fdf *fdf, char *argv);
 void	ft_init_display(t_fdf *fdf);
 void	ft_init_point(t_fdf *fdf);
-void	ft_color(int *z1, int *z2, int *color);
+void	ft_color(float z1, int *color, int max_altitude);
 
 #endif

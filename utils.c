@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 12:54:00 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 15:32:23 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_exit_mlx(t_fdf *fdf)
 {
 	mlx_loop_end(fdf->screen.mlx.mlx);
 	mlx_destroy_image(fdf->screen.mlx.mlx, fdf->screen.image.img);
-	mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
+	//mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	mlx_destroy_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	mlx_destroy_display(fdf->screen.mlx.mlx);
 	free(fdf->screen.mlx.mlx);
@@ -31,6 +31,7 @@ void	ft_init_map(t_fdf *fdf, char *argv)
 	fdf->map.hauteur = 0;
 	fdf->map.largeur = 0;
 	fdf->map.map_path = argv;
+	fdf->map.max_altitude = 0;
 }
 
 void	ft_init_display(t_fdf *fdf)
@@ -52,14 +53,31 @@ void	ft_init_point(t_fdf *fdf)
 	fdf->point.color = 0xFFFFFF;
 }
 
-void	ft_color(int *z1, int *z2, int *color)
+void	ft_color(float z1, int *color, int max_altitude)
 {
-	if (z2 || z1)
-		color = 0xfc0345;
-	else
-		color = 0xBBFAFF;
-	if (z2 != z1)
-		color = 0xfc031c;
-	if (z2 < 0)
-		color = 0xFF00007F;
+	float	percent;
+
+	percent = z1 / max_altitude;
+	if (z1 < 0)
+	{
+		if ((z1 * -1) < 0.5)
+			*color = BLUE;
+		else
+			*color = NAVY_BLUE;
+	}
+	else if (z1 == 0)
+		*color = BLUE;
+	else if (percent > 0 && percent < 0.4)
+		*color = GREEN;
+	else if (percent >= 0.4 && percent < 0.8)
+		*color = MARRON;
+
+	// if (z2 || z1)
+	// 	*color = 0xfc0345;
+	// else
+	// 	*color = 0xBBFAFF;
+	// if (z2 != z1)
+	// 	*color = 0xfc031c;
+	// if (z2 < 0)
+	// 	*color = 0xFF00007F;
 }

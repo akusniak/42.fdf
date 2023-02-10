@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:54:13 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 12:53:02 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 15:02:54 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_dda(t_fdf *fdf)
 	float	x_inc;
 	float	y_inc;
 
-	ft_color(&fdf->point.z1, &fdf->point.z2, &fdf->point.color);
+	ft_color(fdf->point.z1, &fdf->point.color, fdf->map.max_altitude);
 	ft_conversion(fdf);
 	dx = (fdf->point.x2) - (fdf->point.x1);
 	dy = (fdf->point.y2) - (fdf->point.y1);
