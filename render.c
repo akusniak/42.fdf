@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:57:44 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 13:38:13 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:37:41 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ void	ft_print_help(void *mlx, void *window)
 	char	*str;
 
 	str = "[+] zoom   [-] zoom out";
-	mlx_string_put(mlx, window, 13, 677, 0xFFFFFF, str);
+	mlx_string_put(mlx, window, 13, 1000, 0xFFFFFF, str);
 	str = "[^] up   [v] down";
-	mlx_string_put(mlx, window, 13, 692, 0xFFFFFF, str);
+	mlx_string_put(mlx, window, 13, 1015, 0xFFFFFF, str);
 	str = "[<--] left   [-->] right";
-	mlx_string_put(mlx, window, 13, 707, 0xFFFFFF, str);
+	mlx_string_put(mlx, window, 13, 1030, 0xFFFFFF, str);
 	str = "[SPACE] alt +   [f] alt -   [r] alt initial";
-	mlx_string_put(mlx, window, 13, 722, 0xFFFFFF, str);
+	mlx_string_put(mlx, window, 13, 1045, 0xFFFFFF, str);
 	str = "[esc] quit";
-	mlx_string_put(mlx, window, 13, 737, 0xFFFFFF, str);
+	mlx_string_put(mlx, window, 13, 1060, 0xFFFFFF, str);
 }

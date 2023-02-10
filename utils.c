@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 15:32:23 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:46:05 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_init_display(t_fdf *fdf)
 {
 	fdf->display.position_x = 0;
 	fdf->display.position_y = 0;
-	fdf->display.zoom = 0;
+	fdf->display.zoom = 1;
 	fdf->display.altitude = 1;
 }
 
@@ -50,7 +50,7 @@ void	ft_init_point(t_fdf *fdf)
 	fdf->point.x2 = 0;
 	fdf->point.y2 = 0;
 	fdf->point.z2 = 0;
-	fdf->point.color = 0xFFFFFF;
+	fdf->point.color = 0;
 }
 
 void	ft_color(float z1, int *color, int max_altitude)
@@ -60,24 +60,17 @@ void	ft_color(float z1, int *color, int max_altitude)
 	percent = z1 / max_altitude;
 	if (z1 < 0)
 	{
-		if ((z1 * -1) < 0.5)
+		if ((z1 * -1) < 0.2)
 			*color = BLUE;
 		else
 			*color = NAVY_BLUE;
 	}
 	else if (z1 == 0)
 		*color = BLUE;
-	else if (percent > 0 && percent < 0.4)
+	else if (percent > 0 && percent < 0.33)
 		*color = GREEN;
-	else if (percent >= 0.4 && percent < 0.8)
+	else if (percent >= 0.33 && percent < 0.88)
 		*color = MARRON;
-
-	// if (z2 || z1)
-	// 	*color = 0xfc0345;
-	// else
-	// 	*color = 0xBBFAFF;
-	// if (z2 != z1)
-	// 	*color = 0xfc031c;
-	// if (z2 < 0)
-	// 	*color = 0xFF00007F;
+	else
+		*color = 0xFFFFFF;
 }

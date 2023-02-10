@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 14:08:22 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:42:40 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	ft_deal_key(int key, t_fdf *fdf)
 {
 	if (key == MAX)
 		fdf->display.zoom += 1;
-	if (key == MINUS)
+	if (key == MINUS && fdf->display.zoom > 1)
 		fdf->display.zoom -= 1;
 	if (key == UP)
-		fdf->display.position_y -= 7;
+		fdf->display.position_y -= 10;
 	if (key == DOWN)
-		fdf->display.position_y += 7;
+		fdf->display.position_y += 10;
 	if (key == RIGHT)
-		fdf->display.position_x += 7;
+		fdf->display.position_x += 10;
 	if (key == LEFT)
-		fdf->display.position_x -= 7;
+		fdf->display.position_x -= 10;
 	if (key == SPA)
 		fdf->display.altitude += 1;
 	if (key == R)

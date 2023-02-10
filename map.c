@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:02 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 15:29:42 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:28:40 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	ft_map(t_fdf *fdf)
 	fdf->map.data = ft_alloc_tab(fdf->map.hauteur, fdf->map.largeur);
 	ft_fill_tab(fdf);
 	fdf->map.map_path = NULL;
-	fdf->display.zoom = ft_minimum(750 / fdf->map.hauteur / 2,
-			750 / fdf->map.largeur / 2); // mieux le calculer
-	fdf->map.max_altitude = ft_get_max_alt(fdf->map.data, fdf->map.hauteur, fdf->map.largeur); // mieux le calculer
+	fdf->display.zoom = ft_minimum(1080 / fdf->map.hauteur / 2,
+			1920 / fdf->map.largeur / 2);
+	fdf->map.max_altitude = ft_get_max_alt(fdf->map.data, fdf->map.hauteur, fdf->map.largeur);
 }
