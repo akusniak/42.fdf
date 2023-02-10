@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:28 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 15:31:45 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:54:06 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,10 @@ typedef struct s_screen
 
 typedef struct s_display
 {
-	int	zoom;
-	int	position_x;
-	int	position_y;
-	int	altitude;
+	int		zoom;
+	int		position_x;
+	int		position_y;
+	float	altitude;
 }			t_display;
 
 typedef struct s_point
@@ -124,9 +124,9 @@ void	ft_create_image_env(t_fdf *fdf);
 t_fdf	*ft_create_structure(char *argv);
 void	ft_create_window_env(t_fdf *fdf);
 void	ft_map(t_fdf *fdf);
-void	ft_iso(float *x, float *y, int z, int altitude);
+void	ft_iso(float *x, float *y, float z, float altitude);
 void	ft_dda(t_fdf *fdf);
-void	ft_altitude(int *z, int altitude);
+void	ft_altitude(float *z, float altitude);
 void	ft_conversion(t_fdf *fdf);
 void	ft_mlx_put_pixel(t_fdf *fdf, int x, int y, int color);
 void	ft_render(t_fdf *fdf);

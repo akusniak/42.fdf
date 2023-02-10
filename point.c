@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:10:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 12:32:46 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:50:53 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	ft_zoom(float *x, float *y, int zoom)
 	*y *= zoom;
 }
 
-void	ft_altitude(int *z, int altitude)
+void	ft_altitude(float *z, float altitude)
 {
 	*z *= altitude;
 }

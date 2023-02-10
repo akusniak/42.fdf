@@ -6,14 +6,14 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:54:13 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 15:02:54 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:53:49 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
 #include <math.h>
 
-void	ft_iso(float *x, float *y, int z, int altitude)
+void	ft_iso(float *x, float *y, float z, float altitude)
 {
 	ft_altitude(&z, altitude);
 	*x = (*x - *y) * cos(0.8);
