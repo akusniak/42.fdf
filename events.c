@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 18:01:08 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:25:13 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_deal_key(int key, t_fdf *fdf)
 		fdf->display.altitude -= 0.25;
 	if (key == ESC)
 		ft_exit_mlx(fdf);
-	ft_create_image_env(fdf);
+	ft_draw_rect(fdf);
 	ft_draw(fdf);
 	return (0);
 }

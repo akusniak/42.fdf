@@ -6,23 +6,12 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 18:03:58 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:23:29 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
 
-void	ft_exit_mlx(t_fdf *fdf)
-{
-	mlx_loop_end(fdf->screen.mlx.mlx);
-	mlx_destroy_image(fdf->screen.mlx.mlx, fdf->screen.image.img);
-	mlx_destroy_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
-	mlx_destroy_display(fdf->screen.mlx.mlx);
-	free(fdf->screen.mlx.mlx);
-	ft_free_tab_int(fdf->map.data, fdf->map.hauteur);
-	free(fdf);
-	exit(1);
-}
 
 void	ft_init_map(t_fdf *fdf, char *argv)
 {
@@ -72,4 +61,22 @@ void	ft_color(float z1, int *color, int max_altitude)
 		*color = MARRON;
 	else
 		*color = 0xFFFFFF;
+}
+
+void	ft_draw_rect(t_fdf *fdf)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (i < fdf->screen.window.hauteur)
+	{
+		j = 0;
+		while (j < fdf->screen.window.largeur)
+		{
+			ft_mlx_put_pixel(fdf, j, i, 0x000000);
+			j = j + 1;
+		}
+		i = i + 1;
+	}
 }
