@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 17:52:53 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:01:08 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_deal_key(int key, t_fdf *fdf)
 {
 	if (key == MAX)
 		fdf->display.zoom += 1;
-	if (key == MINUS && fdf->display.zoom > 1)
+	if (key == MINUS && fdf->display.zoom > 2)
 		fdf->display.zoom -= 1;
 	if (key == UP)
 		fdf->display.position_y -= 10;
