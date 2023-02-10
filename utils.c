@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 19:13:33 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/10 11:10:19 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 void    ft_exit_mlx(t_fdf *fdf)
 {
@@ -28,7 +28,6 @@ void    ft_exit_mlx(t_fdf *fdf)
 void	ft_init_map(t_fdf *fdf, char *argv)
 {
 	fdf->map.data = NULL;
-	fdf->map.fd = 0;
 	fdf->map.hauteur = 0;
 	fdf->map.largeur = 0;
 	fdf->map.map_path = argv;

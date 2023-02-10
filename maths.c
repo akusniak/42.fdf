@@ -6,11 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:54:13 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:01:24 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:34:28 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 #include <math.h>
 
 void	ft_iso(float *x, float *y, int z, int altitude)

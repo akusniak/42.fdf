@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:36 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 16:43:41 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/10 10:34:46 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 void	ft_create_window_env(t_fdf *fdf)
 {

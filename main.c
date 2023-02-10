@@ -6,11 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:42 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 17:29:00 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:34:23 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 static void ft_parsing(char *map)
 {

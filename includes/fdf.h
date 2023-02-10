@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:28 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 19:06:14 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/10 12:09:41 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
-# define FDH_H
+# define FDF_H
 
 # include <stdio.h>
 # include <fcntl.h>
@@ -68,7 +68,6 @@ typedef struct s_map
 {
 	int		hauteur;
 	int		largeur;
-    int     fd;
 	int		**data;
     char    *map_path;
 }				t_map;

@@ -6,11 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:10:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 16:01:26 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:34:31 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 static void	ft_moove(float *x, float *y, int moove_x, int moove_y)
 {

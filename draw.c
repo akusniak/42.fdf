@@ -6,11 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/03 17:29:25 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:34:53 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 int	ft_fit(t_fdf *fdf)
 {

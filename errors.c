@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:26 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/09 19:14:58 by kus              ###   ########.fr       */
+/*   Updated: 2023/02/10 11:16:18 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/fdf.h"
+#include "includes/fdf.h"
 
 void    ft_errors(int error_code, t_fdf *fdf)
 {
@@ -19,28 +19,23 @@ void    ft_errors(int error_code, t_fdf *fdf)
     if (error_code == OPEN_F)
     {
         ft_printf("Open fail");
-        close(fdf->map.fd);
     }
     if (error_code == READ)
     {
         ft_printf("Read fail");
-        close(fdf->map.fd);
     }
     if (error_code == OPEN_E)
     {
         ft_printf("Empty file");
-        close(fdf->map.fd);
     }
     if (error_code == MALLOC_DATA)
     {
         ft_printf("Memory allocation failed");
-        close(fdf->map.fd);
         free(fdf->map.data);
     }
     if (error_code == MALLOC_DATA_BIS)
     {
         ft_printf("Memory allocation failed");
-        close(fdf->map.fd);
     }
     if (error_code == CLOSE)
     {
