@@ -6,15 +6,15 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 11:10:19 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:54:00 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
 
-void    ft_exit_mlx(t_fdf *fdf)
+void	ft_exit_mlx(t_fdf *fdf)
 {
-    mlx_loop_end(fdf->screen.mlx.mlx);
+	mlx_loop_end(fdf->screen.mlx.mlx);
 	mlx_destroy_image(fdf->screen.mlx.mlx, fdf->screen.image.img);
 	mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	mlx_destroy_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
@@ -50,4 +50,16 @@ void	ft_init_point(t_fdf *fdf)
 	fdf->point.y2 = 0;
 	fdf->point.z2 = 0;
 	fdf->point.color = 0xFFFFFF;
+}
+
+void	ft_color(int *z1, int *z2, int *color)
+{
+	if (z2 || z1)
+		color = 0xfc0345;
+	else
+		color = 0xBBFAFF;
+	if (z2 != z1)
+		color = 0xfc031c;
+	if (z2 < 0)
+		color = 0xFF00007F;
 }

@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:49:18 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 10:34:48 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:29:04 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int	ft_deal_key(int key, t_fdf *fdf)
 		fdf->display.altitude -= 1;
 	if (key == ESC)
 		ft_exit_mlx(fdf);
-	// peut etre clear window ici ??
-	//mlx_clear_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 	ft_create_image_env(fdf);
 	ft_draw(fdf);
 	return (0);

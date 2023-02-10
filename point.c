@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:10:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 10:34:31 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:32:46 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,10 @@ static void	ft_moove(float *x, float *y, int moove_x, int moove_y)
 	*y += moove_y;
 }
 
-static void	ft_zoom(float *x1, float *y1, float *x2, float *y2, int zoom)
+static void	ft_zoom(float *x, float *y, int zoom)
 {
-	*x1 *= zoom;
-	*y1 *= zoom;
-	*x2 *= zoom;
- 	*y2 *= zoom;
-
+	*x *= zoom;
+	*y *= zoom;
 }
 
 void	ft_altitude(int *z, int altitude)
@@ -34,11 +31,16 @@ void	ft_altitude(int *z, int altitude)
 
 void	ft_conversion(t_fdf *fdf)
 {
-	ft_zoom(&fdf->point.x1, &fdf->point.y1, &fdf->point.x2, &fdf->point.y2, fdf->display.zoom);
-	ft_iso(&fdf->point.x1, &fdf->point.y1, fdf->point.z1, fdf->display.altitude);
-	ft_iso(&fdf->point.x2, &fdf->point.y2, fdf->point.z2, fdf->display.altitude);
-	ft_moove(&fdf->point.x1, &fdf->point.y1, fdf->display.position_x, fdf->display.position_y);
-	ft_moove(&fdf->point.x2, &fdf->point.y2, fdf->display.position_x, fdf->display.position_y);
+	ft_zoom(&fdf->point.x1, &fdf->point.y1, fdf->display.zoom);
+	ft_zoom(&fdf->point.x2, &fdf->point.y2, fdf->display.zoom);
+	ft_iso(&fdf->point.x1, &fdf->point.y1, fdf->point.z1,
+		fdf->display.altitude);
+	ft_iso(&fdf->point.x2, &fdf->point.y2, fdf->point.z2,
+		fdf->display.altitude);
+	ft_moove(&fdf->point.x1, &fdf->point.y1, fdf->display.position_x,
+		fdf->display.position_y);
+	ft_moove(&fdf->point.x2, &fdf->point.y2, fdf->display.position_x,
+		fdf->display.position_y);
 }
 
 void	ft_mlx_put_pixel(t_fdf *fdf, int x, int y, int color)

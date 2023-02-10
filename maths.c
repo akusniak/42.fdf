@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:54:13 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 10:34:28 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:53:02 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,7 @@ void	ft_dda(t_fdf *fdf)
 	float	x_inc;
 	float	y_inc;
 
-	/* faire fonction color */
-	fdf->point.color = (fdf->point.z2 || fdf->point.z1) ? 0xfc0345 : 0xBBFAFF;
-	fdf->point.color = (fdf->point.z2 != fdf->point.z1) ? 0xfc031c : fdf->point.color;
-	if (fdf->point.z2 < 0)
-		fdf->point.color = 0xFF00007F;
-
+	ft_color(&fdf->point.z1, &fdf->point.z2, &fdf->point.color);
 	ft_conversion(fdf);
 	dx = (fdf->point.x2) - (fdf->point.x1);
 	dy = (fdf->point.y2) - (fdf->point.y1);
@@ -56,7 +51,8 @@ void	ft_dda(t_fdf *fdf)
 		(int)(fdf->point.y2 - fdf->point.y1))
 	{
 		if (ft_fit(fdf) == YES)
-			ft_mlx_put_pixel(fdf, fdf->point.x1, fdf->point.y1, fdf->point.color);
+			ft_mlx_put_pixel(fdf, fdf->point.x1, fdf->point.y1,
+				fdf->point.color);
 		fdf->point.x1 = fdf->point.x1 + x_inc;
 		fdf->point.y1 = fdf->point.y1 + y_inc;
 	}

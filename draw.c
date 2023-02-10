@@ -6,7 +6,7 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:21 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 10:34:53 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:34:49 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	ft_draw(t_fdf *fdf)
 		}
 		hauteur = hauteur + 1;
 	}
-    mlx_put_image_to_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window, fdf->screen.image.img, 0, 0);
+	mlx_put_image_to_window(fdf->screen.mlx.mlx, fdf->screen.mlx.window,
+		fdf->screen.image.img, 0, 0);
 	ft_print_help(fdf->screen.mlx.mlx, fdf->screen.mlx.window);
 }
