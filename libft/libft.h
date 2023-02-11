@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:17:43 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 12:19:39 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/11 10:11:08 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,6 @@ int		ft_printf(const char *s, ...);
 size_t	ft_putchar(char c);
 int		ft_putstr_printf(const char *str);
 int		ft_get_width(char *line, char separator, char end_of_line);
-char	*ft_gnl(int fd);
-char	*ft_read_copy(int fd, char *save);
-char	*ft_new_save(char *save);
-char	*ft_extract(char *save);
-char	*ft_strjoin_gnl(char *save, char *buffer);
+
 
 #endif

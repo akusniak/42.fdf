@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kus <kus@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:13:28 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 18:18:31 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/11 10:29:37 by kus              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,6 @@ void	ft_init_display(t_fdf *fdf);
 void	ft_init_point(t_fdf *fdf);
 void	ft_color(float z1, int *color, int max_altitude);
 void	ft_draw_rect(t_fdf *fdf);
+int		main(int argc, char **file);
 
 #endif
