@@ -6,7 +6,7 @@
 #    By: kus <kus@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 18:51:15 by akusniak          #+#    #+#              #
-#    Updated: 2023/02/11 10:30:53 by kus              ###   ########.fr        #
+#    Updated: 2023/02/11 10:47:42 by kus              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ MLX = make -C ./minilibx-linux
 $(NAME) : $(OBJS)
 				$(LIB)
 				$(MLX)
-				$(CC) $(CFLAGS) $(OBJS) libft/libft.a minilibx-linux/libmlx_Linux.a $(MLXFLAGS) -o $(NAME)
+				$(CC) $(CFLAGS) $(OBJS) libft/libft.a minilibx/libmlx_Linux.a $(MLXFLAGS) -o $(NAME)
 
 lib :
 		$(LIB)
