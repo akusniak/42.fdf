@@ -76,6 +76,7 @@ BONUS = ft_lstnew.c\
 
 OBJS			= $(SRCS:.c=.o)
 BONUS_OBJS		= $(BONUS:.c=.o)
+DEP				= $(SRCS:.c=.d)
 
 CC				= cc
 RM				= rm -f
@@ -86,6 +87,8 @@ NAME			= libft.a
 .c.o :
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
+.d.o :
+		$(CC) $(CFLAGS) -MM -MD -o $@ $<
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
@@ -96,7 +99,7 @@ clean:
 		$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-		$(RM) $(NAME)
+		$(RM) $(NAME) $(DEP)
 
 re: fclean all
 
@@ -104,3 +107,5 @@ bonus: $(OBJS) $(BONUS_OBJS)
 		ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus
+
+-include $(DEP)

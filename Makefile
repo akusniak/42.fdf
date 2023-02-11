@@ -31,6 +31,7 @@ SRCS = draw.c\
 		utils.c
 
 OBJS = $(SRCS:.c=.o)
+DEP = $(SRCS:.c=.d)
 
 LIB = make bonus -C ./libft
 MLX = make -C ./minilibx
@@ -38,6 +39,8 @@ MLX = make -C ./minilibx
 .c.o :
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
+.d.o : 
+		$(CC) $(CFLAGS) -MM -MD -o $@ $<
 $(NAME) : $(OBJS)
 				$(LIB)
 				$(MLX)
@@ -55,7 +58,7 @@ all :
 bonus : all
 
 clean :
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(DEP)
 
 fclean : clean
 		$(RM) $(NAME)
@@ -65,3 +68,5 @@ fclean : clean
 re : fclean all
 
 .PHONY: all clean fclean re lib mlx
+
+-include $(DEP)
