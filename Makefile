@@ -6,7 +6,7 @@
 #    By: kus <kus@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 18:51:15 by akusniak          #+#    #+#              #
-#    Updated: 2023/02/11 10:47:42 by kus              ###   ########.fr        #
+#    Updated: 2023/02/11 10:48:35 by kus              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS = draw.c\
 OBJS = $(SRCS:.c=.o)
 
 LIB = make bonus -C ./libft
-MLX = make -C ./minilibx-linux
+MLX = make -C ./minilibx
 
 .c.o :
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -60,7 +60,7 @@ clean :
 fclean : clean
 		$(RM) $(NAME)
 		cd ./libft && make fclean
-		cd ./minilibx-linux && make clean
+		cd ./minilibx && make clean
 
 re : fclean all
 
