@@ -85,6 +85,8 @@ void	ft_map(t_fdf *fdf)
 {
 	ft_get_map_information(fdf);
 	fdf->map.data = ft_alloc_tab(fdf->map.hauteur, fdf->map.largeur);
+	if (fdf->map.data == NULL)
+		exit(1);
 	ft_fill_tab(fdf);
 	fdf->map.map_path = NULL;
 	fdf->display.zoom = ft_minimum(1080 / fdf->map.hauteur / 2,

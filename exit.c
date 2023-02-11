@@ -14,9 +14,21 @@
 
 void	ft_errors(int error_code, t_fdf *fdf)
 {
-	(void)error_code;
-	free(fdf);
-	exit(1);
+	if (error_code == MLX_CRASH)
+	{
+		ft_printf("MLX init crash");
+		ft_free_tab_int(fdf->map.data, fdf->map.hauteur);
+		free(fdf);
+		exit(1);
+	}
+	else if (error_code == WIN_CRASH)
+	{
+		ft_printf("MLX window init crash");
+		free(fdf->screen.mlx.mlx);
+		ft_free_tab_int(fdf->map.data, fdf->map.hauteur);
+		free(fdf);
+		exit(1);
+	}
 }
 
 void	ft_exit_mlx(t_fdf *fdf)

@@ -10,10 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME = fdf
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = fdf
+RM = rm -rf
+
+MLXFLAGS = -lX11 -lXext -lm
 
 SRCS = draw.c\
 		events.c\
@@ -28,15 +32,32 @@ SRCS = draw.c\
 
 OBJS = $(SRCS:.c=.o)
 
+LIB = make bonus -C ./libft ## -C indique à make d'executer un autre makefile
+MLX = make -C ./minilibx-linux
+
 .c.o :
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-all :
-clean :
-fclean :
-re :
-.PHONY: all clean fclean re
+$(NAME) : $(OBJS)
+				$(LIB)
+				$(MLX)
+				$(CC) $(CFLAGS) libft/libft.a minilibx-linux/libmlx_Linux.a  $(MLXFLAGS) -o $(NAME)
 
-// 1 ==> gcc -c *.c
-// 2 ==>gcc -o NAME *.o
+lib : $(LIB)
 
+mlx : $(MLX)
+
+all : $(NAME)
+
+bonus : all
+
+clean : $(RM) $(OBJS)
+
+fclean : clean
+			$(RM) $(NAME)
+			cd ./libft && make fclean
+			cd ./minilibx_linux && make clean
+
+re : fclean all
+
+.PHONY: all clean fclean re lib mlx
