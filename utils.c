@@ -6,12 +6,11 @@
 /*   By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 15:22:51 by akusniak          #+#    #+#             */
-/*   Updated: 2023/02/10 18:23:29 by akusniak         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:52:25 by akusniak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
-
 
 void	ft_init_map(t_fdf *fdf, char *argv)
 {
