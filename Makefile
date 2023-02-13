@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kus <kus@student.42.fr>                    +#+  +:+       +#+         #
+#    By: akusniak <akusniak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 18:51:15 by akusniak          #+#    #+#              #
-#    Updated: 2023/02/11 10:48:35 by kus              ###   ########.fr        #
+#    Updated: 2023/02/13 10:38:13 by akusniak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,6 @@ SRCS = draw.c\
 		utils.c
 
 OBJS = $(SRCS:.c=.o)
-DEP = $(SRCS:.c=.d)
 
 LIB = make bonus -C ./libft
 MLX = make -C ./minilibx
@@ -39,8 +38,6 @@ MLX = make -C ./minilibx
 .c.o :
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-.d.o : 
-		$(CC) $(CFLAGS) -MM -MD -o $@ $<
 $(NAME) : $(OBJS)
 				$(LIB)
 				$(MLX)
@@ -58,7 +55,7 @@ all :
 bonus : all
 
 clean :
-		$(RM) $(OBJS) $(DEP)
+		$(RM) $(OBJS)
 
 fclean : clean
 		$(RM) $(NAME)
@@ -68,5 +65,3 @@ fclean : clean
 re : fclean all
 
 .PHONY: all clean fclean re lib mlx
-
--include $(DEP)
